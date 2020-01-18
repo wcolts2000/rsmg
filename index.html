@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Reno Social Media Group: Become know, better your business</title>
+
+  <meta name="description" content="">
+  <meta name="theme-color" content="#CCCCCC">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+      function _(id){ return document.getElementById(id); }
+      function submitForm(){
+        _("mybtn").disabled = true;
+        _("status").innerHTML = 'please wait ...';
+        var formdata = new FormData();
+        formdata.append( "n", _("n").value );
+        formdata.append( "e", _("e").value );
+        formdata.append( "a", _("a").value );
+        formdata.append( "m", _("m").value );        
+        var ajax = new XMLHttpRequest();
+        ajax.open( "POST", "example_parser.php" );
+        ajax.onreadystatechange = function() {
+          if(ajax.readyState == 4 && ajax.status == 200) {
+            if(ajax.responseText == "success"){
+              _("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+            } else {
+              _("status").innerHTML = ajax.responseText;
+              _("mybtn").disabled = false;
+            }
+          }
+        }
+        ajax.send( formdata );
+      }
+      </script>
+</head>
+<body>
+
+<div class="banner">
+  <div class="header">
+    <div class="header-inner container clear">
+      <a class="logo_white" href="#"><span class="sr">Reno Social Media  Group</span></a>
+      <input type="checkbox" id="navigation-toggle-checkbox" name="navigation-toggle-checkbox" class="navigation-toggle-checkbox none">
+      <label for="navigation-toggle-checkbox" class="navigation-toggle-label" onclick>
+        <span class="navigation-toggle-label-inner">
+          <span class="sr">Navigation</span>
+      
+      </label>
+      <div class="navigation">
+        <ul class="navigation-menu">
+          <li class="navigation-item"><a href="#home">Home</a></li>
+          <li class="navigation-item"><a href="#services">Services</a></li>
+          <li class="navigation-item"><a href="#about">About Us</a></li>
+          <li class="navigation-item"><a href="#news">News</a></li>
+          <li class="navigation-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="banner-inner">
+      <h1 class="banner-lead">
+        <span class="banner-lead-1">Reno Social</span>
+        <span class="banner-lead-2">Media Group</span>
+      </h1>
+      <div class="banner-content col-8-m no-float-m">
+        <p>
+          Let our strategy consultants help you climb. Join the Social Media phenomenon and become known.
+        </p>
+      </div>
+      <div class="banner-buttons">
+        <a href="#services" class="button button-primary">Get started</a>
+        <a href="#about" class="button button-secondary">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="animate-block content-block services-block">
+  <div class="services-block-inner container">
+    <div class="content-block-inner text-center">
+      <h2 class="uppercase pad-bottom-20">Our Services</h2>
+      <div class="col-10-l no-float center">
+        <p>
+          Our Social Media Services focus on our clients' most critical issues and opportunities. With optimizing the potential of the Social Media Avenues available within an ever growing community, not just the individual benefits, our entire community benefits. We are building the Biggest Little Social Media Group in the Nation. Become a part of it today.
+        </p>
+      </div>
+    </div>
+    <ul class="services-list clear">
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-performance">Performance Increase</h3>
+        <p>
+          Enabling companies to grow revenue, improve margins and reposition quickly.
+        </p>
+      </li>
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-customer">Customer Marketing</h3>
+        <p>
+          Become a strong presence in the community with regular posts.
+        </p>
+      </li>
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-it">Innovative Technology</h3>
+        <p>
+          Realizing the full potential of IT resources, investments and assets.
+        </p>
+      </li>
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-transformation">Full Transformation</h3>
+        <p>
+          Through analytics we can help you realize the full potential of your business.
+        </p>
+      </li>
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-strategy">Strategy</h3>
+        <p>
+          Tailored solutions that deliver results and achieve sustained growth.
+        </p>
+      </li>
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-equity">Increased Revenue</h3>
+        <p>
+          Bring in new clientele and expand your customer base. 
+        </p>
+      </li>
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-digital">Digital</h3>
+        <p>
+          Delight customers and operate smarter and faster.
+        </p>
+      </li>
+      <li class="service-item col-6 col-3-m">
+        <h3 class="service-item-heading service-icon service-icon-delivery">Community Involvement</h3>
+        <p>
+          With Social Media, it's not just your team helping you market. It's EVERYONE that reposts and likes you!
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="animate-block feature-block contact-feature-block">
+  <div class="feature-block-inner container">
+    <div class="text-center">
+      <h2 class="feature-block-heading">Join the Social Media Craze Today and Grow your Business</h2>
+      <a class="button button-primary" href="#contact">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="content-block about-block">
+  <div class="about-block-inner container">
+    <div class="animate-block content-block-inner text-center">
+      <h2 class="uppercase pad-bottom-20">About Us</h2>
+      <div class="col-10-l no-float center">
+        <p>
+          Reno Social Media Group is an ever growing community within our community. We care for our clients' business as our own. They know we're in this together. Expanding everyones presence within the community and growing our economy is our primary goal.
+        </p>
+      </div>
+    </div>
+    <div class="animate-block about-content clear row-m">
+      <div class="what-we-do-block col-6-m pad-top-20">
+        <h3 class="heading fs-3">What We Do</h3>
+        <p>
+          What we do in Reno Social Media Group is helping to transform the area's great companies into more known and recognized versions of themselves. It's true, our mission is to help our clients create such high levels of economic value that together we redefine our respective industries. By becoming a strong presence in the social media market you can reach out to an unlimited market like never before.
+        </p>
+        <p>
+          We work with you to create a strong marketing campaign with weekly posts and specials, enticing the customers to come and see what you have to offer. We are passionate about achieving better results for our clients-results that go beyond financial and are uniquely tailored, pragmatic, holistic, and enduring.
+        </p>
+        <p>
+          We take the headache out of utilizing social media by ensuring that new weekly specials and posts are added to constantly drive new customers in and bring old customers back.
+        </p>
+        <p>
+          With todays consumers doing everything online, can you afford not to be a part of the Social Media Networks and chance missing out on the GLOBAL, not just local, marketing that your company deserves to have?
+        </p>
+      </div>
+      <div class="our-clients-block col-6-m clear pad-top-20">
+        <h3 class="heading fs-3">Our Clients</h3>
+        <input type="radio" name="clients" id="client-tab-1" class="client-tab-radio client-tab-radio-1 none" checked>
+        <label class="client-tab-label client-tab-label-1" for="client-tab-1" onclick><span class="none">Client Tab</span></label>
+        <div class="client-tab client-tab-1">
+          <ul class="clients-list clear">
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/nnns.png" alt="Northern Nevada Network Services"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/ftl.png" alt="ftl"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/HUP.png" alt="Hurry Up Print"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/mowBlowAndGo.png" alt="Transmission House"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/noemi.png" alt="noemis pupuseria"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/Air%20IT.png" alt="Air IT"></a>
+            </li>
+          </ul>
+        </div>
+        <input type="radio" name="clients" id="client-tab-2" class="client-tab-radio client-tab-radio-2 none">
+        <label class="client-tab-label client-tab-label-2" for="client-tab-2" onclick><span class="none">Client Tab</span></label>
+        <div class="client-tab client-tab-2">
+          <ul class="clients-list clear">
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/ftl.png" alt="ftl"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/TRANSMISSION%20HOUSE.png" alt="Transmission House"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/mowBlowAndGo.png" alt="lupitas"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/HUP.png" alt="Hurry Up Print"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/Air%20IT.png" alt="Air IT"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/nnns.png" alt="Northern Nevada Network Services"></a>
+            </li>
+          </ul>
+        </div>
+        <input type="radio" name="clients" id="client-tab-3" class="client-tab-radio client-tab-radio-3 none">
+        <label class="client-tab-label client-tab-label-3" for="client-tab-3" onclick><span class="none">Client Tab</span></label>
+        <div class="client-tab client-tab-3">
+          <ul class="clients-list clear">
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/TRANSMISSION%20HOUSE.png" alt="Transmission House"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/HUP.png" alt="Hurry Up Print"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/Air%20IT.png" alt="Air IT"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/nnns.png" alt="Northern Nevada Network Services"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/ftl.png" alt="FTL"></a>
+            </li>
+            <li class="client-item col-6 col-4-l">
+              <a href="#"><img class="block img-full" src="img/mowBlowAndGo.png" alt="paradise sushi"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    </div>
+  </div>
+</div>
+
+<div id="video-feature-block" class="feature-block video-feature-block">
+  <div class="video-feature-inner container">
+    <div class="animate-block content-block-inner text-center">
+            <h2 class="feature-block-heading">"Alone we can do so little, together we can do so much." --Helen Keller</h2>
+      <div class="col-10-l no-float center">
+        <p>
+          When we all work together to spread the news of great services and companies, our individual businesses grow, stregthening our community and economy. It's a win - win situation.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div id="news" class="animate-block content-block news-block">
+  <div class="news-block-inner container">
+    <div class="content-block-inner text-center">
+      <h2 class="uppercase pad-bottom-20">Staying Up To Date</h2>
+      <div class="col-10-l no-float center">
+        <p>
+        With an ever-growing and ever-changing marketplace, its increasingly more and more important to be on the cutting edge of all the marketing avenues that are available to us. We are here to help you tap into the potential of web based and social media based marketing to keep your business doing what it should...growing and becoming known not just locally but internatinally!   
+        </p>
+      </div>
+    </div>
+    <div class="animate-block news-list clear">
+      <div class="news-list-left col-8-l no-padding-l">
+        <div class="news-item clear">
+            <a href="#" class="news-item-image col-7-l no-padding-l">
+              <img class="block img-fluid" src="img/news-item-01.jpg" alt="News Item 01">
+            </a>
+          <div class="news-item-content col-5-l no-padding-l">
+            <div class="news-item-content-inner">
+              <h3 class="news-item-title uppercase"><a href="#">become a leading name in your industry</a></h3>
+              <p>
+                With consistent posts exposure will never again be a problem! Don't miss out on the free marketing that your satisified customers will bring through likes and shares!
+              </p>
+              <em class="news-item-publish-date">
+                ....posts updated weekly
+              </em>
+            </div>
+          </div>
+        </div>
+        <div class="news-item news-item-secondary clear">
+          <a href="#" class="news-item-image col-7-l no-padding-l">
+            <img class="block img-fluid" src="img/news-item-02.jpg" alt="News Item 02">
+          </a>
+          <div class="news-item-content col-5-l no-padding-l">
+            <div class="news-item-content-inner">
+              <h3 class="news-item-title uppercase"><a href="#">marketing that will bring the customers to you</a></h3>
+              <p>
+                We help you build a campaign of special offers that will keep them coming back for more.
+              </p>
+              <em class="news-item-publish-date">
+                ...weekly specials
+              </em>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="news-list-right col-4-l no-padding-l">
+        <div class="news-item news-item-third clear">
+          <a href="#" class="news-item-image col-7-l no-padding-l">
+            <img class="block img-fluid" src="img/news-item-03.jpg" alt="News Item 03">
+          </a>
+          <div class="news-item-content col-5-l no-padding-l">
+            <div class="news-item-content-inner">
+              <h3 class="news-item-title uppercase"><a href="#"></a></h3>
+              <p>
+                A thorough review of a power generation portfolio informs decisions about how to reduce costs, raise revenues and make strategic plans.
+              </p>
+              <em class="news-item-publish-date">
+                Posted: 08.07.2017
+              </em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="animate-block content-block contact-block">
+  <div class="contact-block-inner container">
+    <div class="clear">
+      <div class="contact-block-content col-6-m">
+        <h2 class="fs-2 heading">Reno Social Media Group</h2>
+        <p>
+          Thank you for your interest in Reno Social Media Group. We strive to better our business along with yours to in an effort to further both.  Connect with us to find out how we can grow together and start the process of launching your business to heights you never thought possible before.
+        </p>
+        <ul class="contact-list">
+          <li><span class="icon contact-icon contact-icon-location">1105 S Wells Ave, Reno NV 89502, United States</span></li>
+          <li><span class="icon contact-icon contact-icon-phone">+1 (775) 742-3138</span></li>
+          <li><span class="icon contact-icon contact-icon-email"><a href="mailto:sales@hurryupprint.com?subject=General%20Enquiry&anp;body=">sales@hurryupprint.com</a></span></li>
+        </ul>
+        <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=amzn_biz_bounty&banner=0K3WH19RMBH6B504RGG2&f=ifr&linkID=79fc76e574b8f09ec51037f219877902&t=nochill775-20&tracking_id=nochill775-20" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+      </div>
+      <div class="contact-block-form col-6-m">
+        <h2 class="fs-2 heading">Contact</h2>
+        <p>
+          Please contact us using contact form below.
+        </p>
+        <form id="my_form" class="contact-form" onsubmit="submitForm(); return false;">
+          <fieldset class="contact-form-wrap">
+            <legend class="sr">Contact Us</legend>
+            <div class="pad-top-5 pad-bottom-5">
+              <label class="sr" for="name">Name</label>
+              <input name="name" class="field" id="n" type="text" placeholder="Name" required>
+            </div>
+            <div class="pad-top-5 pad-bottom-5">
+              <label class="sr" for="email">Email</label>
+              <input name="email" class="field" id="e" type="email" placeholder="Email" required>
+            </div>
+            <div class="pad-top-5 pad-bottom-5">
+              <label class="sr" for="subject">Message</label>
+              <input name="subject" class="field" id="a" type="text" placeholder="Subject" required>
+            </div>
+            <div class="pad-top-5 pad-bottom-5">
+              <label for="message" class="sr">Message</label>
+              <textarea placeholder="Message" class="field" name="message" id="m" cols="30" rows="7" required></textarea>
+            </div>
+            <div class="text-right">
+              <p><input type="submit" id="mybtn" class="button button-primary contact-submit" value="SUBMIT"><span id="status"></span></p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner container">
+    <div class="clear">
+      <div class="footer-column col-8-m">
+        <p>
+          &copy; Copyright 2017 &mdash; All Rights Reserved
+        </p>
+      </div>
+      <div class="footer-column col-4-m">
+        <ul class="footer-social-list icon-list-inline">
+          <!-- <li class="navigation-item-social"><a class="social-icon social-linkedin" href="#"><span class="sr">LinkedIn</span></a></li> -->
+          <li class="navigation-item-social"><a class="social-icon social-facebook" href="https://www.facebook.com/groups/251863698569258/" target="_blank"><span class="sr">Facebook</span></a></li>
+          <!-- <li class="navigation-item-social"><a class="social-icon social-twitter" href="#"><span class="sr">Twitter</span></a></li> -->
+          <!-- <li class="navigation-item-social"><a class="social-icon social-youtube" href="#"><span class="sr">YouTube</span></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/vendor/wow.js"></script>
+<script src="js/default.js"></script>
+
+</body>
+</html>
